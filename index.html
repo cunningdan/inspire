@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>Inspire</title>
+</head>
+
+<body>
+    <main id="image" class="image-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-2 bg-warning d-flex flex-column justify-content-center align-items-center">
+                    <h4 id="weather" class=""></h4>
+                </div>
+                <div class="col-7"></div>
+                <div class="col-2">
+                    <div class="card card-bg">
+                        <div class="card-body card-bg shadow-lg text-todo">
+                            <form onsubmit="app.todoController.addTodo(event)" class="form-inline">
+                                <input type="text" class="form-group bg-transparent" id="description" name="description"
+                                    placeholder="Todo">
+                                <button class="btn btn-primary" type="submit">Add</button>
+                            </form>
+                            <div id="todo"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-center">
+            <div class="col">
+                <p id="quotes"></p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
