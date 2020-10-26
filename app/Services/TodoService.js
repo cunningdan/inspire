@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import Todo from "../Models/Todo.js";
+import Todo from "../models/Todo.js";
 import { api } from "../Services/AxiosService.js";
 
 // TODO you will need to change 'YOURNAME' to your actual name or all requests will be rejected
