@@ -37,8 +37,7 @@ export default class TodoController {
  * This method takes in an id of the Todo that should be togggled as complete
  * @param {string} todoId 
  */
-  toggleTodoStatus(e, todoId) {
-    e.preventDefault()
+  toggleTodoStatus(todoId) {
     try {
       todoService.toggleTodoStatus(todoId);
     } catch (error) {
