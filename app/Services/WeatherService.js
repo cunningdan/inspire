@@ -9,7 +9,10 @@ class WeatherService {
     ProxyState.weather = new Weather(res.data);
   }
   async changeCelsius() {
-    // let celsius = ProxyState.weather - 273.15
+    let celcius = ProxyState.weather.kelvin - 273.13
+    new Weather(celcius)
+  }
+  async changeFahrenheit() {
 
   }
 }

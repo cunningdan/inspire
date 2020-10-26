@@ -10,6 +10,7 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
-
+    // this.celcius = ''
+    // this.fahrenheit = ''
   }
 }

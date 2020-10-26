@@ -7,14 +7,14 @@ import weatherService from "../Services/WeatherService.js";
 //TODO Complete rendering data to the screen
 function drawWeather(x) {
   console.log("THE WEATHER MAN SAYS:", ProxyState.weather);
-  // if (x == 0) {
-  document.getElementById('weather').innerHTML = ProxyState.weather.kelvin
-  // } if (x == 1) {
-  // document.getElementById('weather').innerHTML = celcius
-  // } if (x == 2) {
-  // document.getElementById('weather').innerHTML = ProxyState.weather.kelvin - 
-  // }
+  if (x == 1) {
+    document.getElementById('weather').innerHTML = ProxyState.weather.celcius
+  } if (x == 2) {
+    document.getElementById('weather').innerHTML = ProxyState.weather.fahrenheit
+  }
+  else { document.getElementById('weather').innerHTML = ProxyState.weather.kelvin }
 }
+
 export default class WeatherController {
   constructor() {
     ProxyState.on("weather", drawWeather);
@@ -24,6 +24,23 @@ export default class WeatherController {
   getWeather() {
     try {
       weatherService.getWeather()
+    }
+    catch (e) {
+      console.error(e)
+    }
+  }
+  changeCelsius() {
+    try {
+      weatherService.changeCelsius()
+    }
+    catch (e) {
+      console.error(e)
+    }
+    drawWeather()
+  }
+  changeFahrenheit() {
+    try {
+      weatherService.changeFahrenheit()
     }
     catch (e) {
       console.error(e)

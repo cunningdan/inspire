@@ -7,7 +7,7 @@ export default class Quote {
     }
     get template() {
         return /*html*/ ` 
-        <div>${this.body}</div>
+        <div>${this.body} -by ${this.author}</div>
         `
     }
 }
